@@ -56,9 +56,12 @@ command: {
     printConfig: cli.Print & {
       text: yaml.Marshal(config)
     }
+    
     printObjects: cli.Print & {
       text: yaml.MarshalStream(objects)
     }
   }
 
 }
+
+config: command.dump.config
